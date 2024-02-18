@@ -2,7 +2,7 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ParagraphMeta: IPublicTypeComponentMetadata = {
   componentName: 'Paragraph',
-  title: 'Paragraph',
+  title: '段落',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -27,6 +27,7 @@ const ParagraphMeta: IPublicTypeComponentMetadata = {
         },
         name: 'children',
         setter: 'TextAreaSetter',
+        defaultValue: '',
       },
     ],
     supports: {
@@ -34,16 +35,18 @@ const ParagraphMeta: IPublicTypeComponentMetadata = {
     },
     component: {},
   },
+  category: '基础',
+  group: '组件',
 };
 
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Paragraph',
+    title: '段落',
     screenshot: '',
     schema: {
       componentName: 'Paragraph',
       props: {
-        children: '这是一段文本',
+        children: '',
       },
     },
   },

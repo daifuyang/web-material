@@ -73,10 +73,13 @@
   },
   "dependencies": {
     "@alifd/next": "^1.25.27",
-    "moment": "^2.29.4",
+    "bootstrap": "^5.3.2",
+    "moment": "latest",
     "prop-types": "^15.5.8",
     "react": "^16.x",
-    "react-dom": "^16.x"
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^16.x",
+    "swiper": "^9.4.1"
   },
   "acceptDependencies": {
     "webpack": "^4.46.x"
@@ -89,5 +92,6 @@
   },
   "lcMeta": {
     "type": "component"
-  }
+  },
+  "homepage": "https://unpkg.com/web-material@0.1.0/build/index.html"
 }

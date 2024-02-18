@@ -1,5 +1,5 @@
 {
-  "library": "BizComps",
+  "library": "webMaterial",
   "libraryTarget": "umd",
   "sourceMap": true,
   "alias": {
