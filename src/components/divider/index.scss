@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+#{$biz-css-prefix}-divider-wrap {
+    padding: 24px 0;
+}
+
+#{$biz-css-prefix}-divider {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    border-block-start: 1px solid rgba(5, 5, 5, 0.06);
+    margin-top: -1px;
+}
+
+#{$biz-css-prefix}-divider-horizontal {
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+}

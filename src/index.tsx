@@ -31,6 +31,9 @@ export { default as Swiper } from './components/swiper';
 export type { DivProps } from './components/div';
 export { default as Div } from './components/div';
 
+export type { DividerProps } from './components/divider';
+export { default as Divider } from './components/divider';
+
 export { Row, Col };
 
 const bizCssPrefix = 'web-ui';
