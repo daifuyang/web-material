@@ -10,6 +10,15 @@ import Col from 'react-bootstrap/Col';
 export type { ParagraphProps } from './components/paragraph';
 export { default as Paragraph } from './components/paragraph';
 
+export type { HeaderProps } from './components/header';
+export { default as Header } from './components/header';
+
+export type { MainProps } from './components/main';
+export { default as Main } from './components/main';
+
+export type { FooterProps } from './components/footer';
+export { default as Footer } from './components/footer';
+
 export type { TitleProps } from './components/title';
 export { default as Title } from './components/title';
 
@@ -18,6 +27,9 @@ export { default as Container } from './components/container';
 
 export type { NavbarProps } from './components/navbar';
 export { default as Navbar } from './components/navbar';
+
+export type { MenuProps } from './components/menu';
+export { default as Menu } from './components/menu';
 
 export type { ButtonProps } from './components/button';
 export { default as Button } from './components/button';

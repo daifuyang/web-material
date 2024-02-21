@@ -24,15 +24,16 @@ export interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = function Navbar({
   brand,
+  menu,
   extra,
   menuAlign,
   children,
   ...otherProps
 }) {
   let navClassName = 'ms-auto';
-  if (menuAlign == 'center') {
+  if (menuAlign === 'center') {
     navClassName = 'm-auto';
-  } else if (menuAlign == 'left') {
+  } else if (menuAlign === 'left') {
     navClassName = 'me-auto';
   }
 
@@ -40,13 +41,10 @@ const Navbar: React.FC<NavbarProps> = function Navbar({
     <BsNavbar expand="lg" className="bg-body-tertiary">
       <Container>
         <a className="navbar-brand">{brand}</a>
-        <BsNavbar.Toggle aria-controls="basic-navbar-nav" />
-        <BsNavbar.Collapse id="basic-navbar-nav">
+        <BsNavbar.Toggle />
+        <BsNavbar.Collapse >
           <div className={navClassName}>
-            <Nav>
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
+            {menu}
           </div>
           {extra}
         </BsNavbar.Collapse>

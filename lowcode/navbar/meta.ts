@@ -85,6 +85,36 @@ const Meta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'menu',
+            'zh-CN': '菜单',
+          },
+        },
+        name: 'menu',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node',
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: [
+              {
+                componentName: 'Menu',
+                props: {},
+                hidden: false,
+                title: '',
+                isLocked: false,
+                condition: true,
+                conditionGroup: '',
+              },
+            ],
+          },
+        },
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
             'en-US': 'extra',
             'zh-CN': '扩展',
           },
@@ -92,7 +122,6 @@ const Meta: IPublicTypeComponentMetadata = {
         name: 'extra',
         setter: {
           componentName: 'SlotSetter',
-          isRequired: true,
           props: {
             mode: 'node',
           },
