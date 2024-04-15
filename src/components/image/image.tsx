@@ -36,8 +36,6 @@ const Image: React.FC<ImageProps> = function Image({
     style.height = newHeight;
   }
 
-  console.log('style',style)
-
   return <img src={src} alt={alt} style={style} {...otherProps} />;
 };
 

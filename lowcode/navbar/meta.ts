@@ -99,7 +99,7 @@ const Meta: IPublicTypeComponentMetadata = {
             type: 'JSSlot',
             value: [
               {
-                componentName: 'Menu',
+                componentName: 'NextMenu',
                 props: {},
                 hidden: false,
                 title: '',

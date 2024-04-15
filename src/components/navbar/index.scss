@@ -1,5 +1,14 @@
 @import '../../variables.scss';
 
-#{$biz-css-prefix}-colorful-button {
-  border: 2px dashed blue;
+#{$biz-css-prefix}-navbar {
+  padding: 0;
+  .navbar-nav {
+    .nav-link {
+      color: var(--bs-nav-link-color);
+      padding: 0px 1rem;
+    }
+    .nav-link:hover {
+      color: var(--bs-nav-link-hover-color);
+    }
+  }
 }

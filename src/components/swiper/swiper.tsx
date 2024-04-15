@@ -7,8 +7,12 @@ export interface SwiperProps {
   __designMode?: string;
 }
 
-const MySwiper: React.FC<SwiperProps> = function MySwiper({ __designMode, ...otherProps }) {
-  if (__designMode == 'design') {
+const MySwiper: React.FC<SwiperProps> = function MySwiper(props: SwiperProps) {
+
+  const { __designMode } = props
+  console.log('props',props)
+
+  if (__designMode === 'design') {
     return <div className="swiper-design">轮播图</div>;
   }
 

@@ -37,9 +37,9 @@
     "test": "test"
   },
   "keywords": [
-    "Fusion"
+    "web-material"
   ],
-  "author": "fusion-team",
+  "author": "codecloud",
   "license": "MIT",
   "husky": {
     "hooks": {

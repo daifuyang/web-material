@@ -1,10 +1,11 @@
+import classNames from 'classnames';
 import * as React from 'react';
 import { createElement } from 'react';
 
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import BsNavbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import { bizCssPrefix } from '../../variables';
 
 export interface NavbarProps {
   /**
@@ -20,6 +21,7 @@ export interface NavbarProps {
   menu?: React.ReactNode;
   menuAlign?: 'left' | 'center' | 'right';
   extra?: React.ReactNode;
+  className?: string;
 }
 
 const Navbar: React.FC<NavbarProps> = function Navbar({
@@ -27,8 +29,7 @@ const Navbar: React.FC<NavbarProps> = function Navbar({
   menu,
   extra,
   menuAlign,
-  children,
-  ...otherProps
+  className,
 }) {
   let navClassName = 'ms-auto';
   if (menuAlign === 'center') {
@@ -37,17 +38,22 @@ const Navbar: React.FC<NavbarProps> = function Navbar({
     navClassName = 'me-auto';
   }
 
+  const __className = classNames({
+    [className]: !!className,
+    [navClassName]: !!navClassName,
+    [`${bizCssPrefix}-navbar`]: true
+})
+
+
   return (
-    <BsNavbar expand="lg" className="bg-body-tertiary">
+    <BsNavbar className={__className} expand="lg">
       <Container>
         <a className="navbar-brand">{brand}</a>
         <BsNavbar.Toggle />
-        <BsNavbar.Collapse >
-          <div className={navClassName}>
+        <div className={navClassName}>
             {menu}
           </div>
           {extra}
-        </BsNavbar.Collapse>
       </Container>
     </BsNavbar>
   );

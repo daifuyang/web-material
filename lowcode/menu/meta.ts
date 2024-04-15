@@ -1,7 +1,7 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const Meta: IPublicTypeComponentMetadata = {
-  componentName: 'Menu',
+  componentName: 'NextMenu',
   title: '菜单',
   docUrl: '',
   screenshot: '',
@@ -58,7 +58,7 @@ const Meta: IPublicTypeComponentMetadata = {
         defaultValue: '',
       },
     ],
-    component: { nestingRule: { parentWhitelist: ['Menu'] } },
+    // component: { nestingRule: { parentWhitelist: ['Navbar'] } },
     supports: {
       className: true,
       style: true,
@@ -70,15 +70,15 @@ const Meta: IPublicTypeComponentMetadata = {
     callbacks: {},
   },
   category: '布局',
-  group: '菜单',
+  group: '组件',
   priority: 9999,
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: '导航栏',
+    title: '菜单',
     screenshot: '',
     schema: {
-      componentName: 'Navbar',
+      componentName: 'NextMenu',
       props: {},
       children: '',
     },
