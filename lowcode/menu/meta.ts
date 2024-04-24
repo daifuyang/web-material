@@ -9,7 +9,7 @@ const Meta: IPublicTypeComponentMetadata = {
   npm: {
     package: 'web-material',
     version: '0.1.0',
-    exportName: 'Menu',
+    exportName: 'NextMenu',
     main: 'src/index.tsx',
     destructuring: true,
     subName: '',

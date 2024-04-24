@@ -22,6 +22,7 @@ export interface NavbarProps {
   menuAlign?: 'left' | 'center' | 'right';
   extra?: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const Navbar: React.FC<NavbarProps> = function Navbar({
@@ -30,6 +31,7 @@ const Navbar: React.FC<NavbarProps> = function Navbar({
   extra,
   menuAlign,
   className,
+  style
 }) {
   let navClassName = 'ms-auto';
   if (menuAlign === 'center') {
@@ -46,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = function Navbar({
 
 
   return (
-    <BsNavbar className={__className} expand="lg">
+    <BsNavbar className={__className} style={style} expand="lg">
       <Container>
         <a className="navbar-brand">{brand}</a>
         <BsNavbar.Toggle />

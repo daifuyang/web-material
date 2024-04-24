@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+#{$biz-css-prefix}-h1,
+#{$biz-css-prefix}-h2,
+#{$biz-css-prefix}-h3,
+#{$biz-css-prefix}-h4,
+#{$biz-css-prefix}-h5,
+#{$biz-css-prefix}-h6 {
+    margin: 0;
+}

@@ -1,7 +1,26 @@
+@import '../../variables.scss';
+
 .swiper-design {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 300px;
+}
+
+#{$biz-css-prefix}-swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+   
 }

@@ -29,7 +29,7 @@ export type { NavbarProps } from './components/navbar';
 export { default as Navbar } from './components/navbar';
 
 export type { MenuProps } from './components/menu';
-export { default as Menu } from './components/menu';
+export { default as NextMenu } from './components/menu';
 
 export type { ButtonProps } from './components/button';
 export { default as Button } from './components/button';

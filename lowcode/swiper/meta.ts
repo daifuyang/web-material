@@ -17,56 +17,51 @@ const Meta: IPublicTypeComponentMetadata = {
   configure: {
     props: [
       {
-        name: 'src',
+        name: 'items',
         title: {
           label: {
             type: 'i18n',
             'en-US': 'src',
-            'zh-CN': '图片地址',
+            'zh-CN': '轮播项',
           },
-          tip: '',
         },
-        setter: 'StringSetter',
-        defaultValue: '',
+        setter: 'JsonSetter',
       },
       {
-        name: 'width',
+        name: 'navigation',
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': '图片宽度',
+            'en-US': 'navigation',
+            'zh-CN': '导航按钮',
           },
-          tip: '',
         },
-        setter: 'StringSetter',
-        defaultValue: '',
+        setter: 'BoolSetter',
+        defaultValue: true,
       },
       {
-        name: 'height',
+        name: 'pagination',
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': '图片高度',
+            'en-US': 'pagination',
+            'zh-CN': '分页器',
           },
-          tip: '',
         },
-        setter: 'StringSetter',
-        defaultValue: '',
+        setter: 'BoolSetter',
+        defaultValue: true,
       },
       {
-        name: 'alt',
+        name: 'autoplay',
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'alt',
-            'zh-CN': '图片描述',
+            'en-US': 'autoplay',
+            'zh-CN': '自动滚动',
           },
-          tip: '',
         },
-        setter: 'StringSetter',
-        defaultValue: 'logo',
+        setter: 'BoolSetter',
+        defaultValue: true,
       },
     ],
     supports: {
