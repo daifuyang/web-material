@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import * as React from 'react';
 import { createElement, CSSProperties } from 'react';
 import Nav from 'react-bootstrap/Nav';
+import Link from '../link';
+import { useConfig } from '../configProvider';
 
 interface MenuItemType {
     key: string
@@ -11,6 +13,7 @@ interface MenuItemType {
 }
 
 export interface MenuProps {
+    as: string | React.ComponentType<T>
     __designMode: string
     items: MenuItemType[]
     className: string
@@ -21,9 +24,14 @@ export interface MenuProps {
     hoverColor?: string
 }
 
-export default function Menu(props: MenuProps) {
+const Menu = (props: MenuProps) => {
+
+    const { __designMode, as: menuAs, items = [], className, style, color, bgColor, fontSize, hoverColor } = props
     
-    const { __designMode, items = [], className, style,color,bgColor,fontSize,hoverColor } = props
+    const NavLink = React.useCallback( (props: any) => {
+        return <Link as={menuAs} {...props} />
+    }, [menuAs])
+    
     if (__designMode === 'design' && items.length === 0) {
         return (
             <div>请先选择导航数据</div>
@@ -38,9 +46,10 @@ export default function Menu(props: MenuProps) {
         ...style,
         '--bs-navbar-color': color,
         '--bs-nav-link-hover-color': hoverColor,
-       bgColor,
-       fontSize
+        bgColor,
+        fontSize
     }
+
 
     return (
         <Nav className={__className}>
@@ -48,10 +57,12 @@ export default function Menu(props: MenuProps) {
                 items.map((item, index) => {
                     const href = __designMode === 'design' ? undefined : item.href
                     return (
-                        <Nav.Link style={__style} key={item.key || index} href={href}>{item.label}</Nav.Link>
+                        <Nav.Link as={NavLink} style={__style} key={item.key || index} href={href}>{item.label}</Nav.Link>
                     )
                 })
             }
         </Nav>
     )
 }
+
+export default Menu;

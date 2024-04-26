@@ -17,7 +17,6 @@ export interface SwiperProps {
 const MySwiper: React.FC<SwiperProps> = function MySwiper(props: SwiperProps) {
   const { __designMode, items = [], style, navigation, pagination, autoplay, loop } = props
   let newItems = [...items];
-  console.log('props', props)
   if (__designMode === 'design') {
     if (newItems?.length > 0) {
       newItems = [newItems[0]]

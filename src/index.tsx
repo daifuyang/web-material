@@ -48,6 +48,12 @@ export { default as Divider } from './components/divider';
 
 export { Row, Col };
 
+export type { LinkProps } from './components/link';
+export { default as Link} from './components/link';
+
+export type { ConfigProviderProps } from './components/configProvider';
+export { default as ConfigProvider, useConfig } from './components/configProvider';
+
 const bizCssPrefix = 'web-ui';
 
 export { bizCssPrefix };
