@@ -70,7 +70,9 @@ const Meta: IPublicTypeComponentMetadata = {
       style: true,
       loop: true,
     },
-    component: {},
+    component: {
+      isContainer: true, // 容器组件
+    },
     advanced: {},
   },
   experimental: {

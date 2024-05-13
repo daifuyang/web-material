@@ -10,6 +10,9 @@ import Col from 'react-bootstrap/Col';
 export type { ParagraphProps } from './components/paragraph';
 export { default as Paragraph } from './components/paragraph';
 
+export type { RichTextProps } from './components/richText';
+export { default as RichText } from './components/richText';
+
 export type { HeaderProps } from './components/header';
 export { default as Header } from './components/header';
 
@@ -41,7 +44,7 @@ export type { SwiperProps } from './components/swiper';
 export { default as Swiper } from './components/swiper';
 
 export type { DivProps } from './components/div';
-export { default as Div } from './components/div';
+export { default as Div, default as Articles } from './components/div';
 
 export type { DividerProps } from './components/divider';
 export { default as Divider } from './components/divider';
@@ -49,7 +52,7 @@ export { default as Divider } from './components/divider';
 export { Row, Col };
 
 export type { LinkProps } from './components/link';
-export { default as Link} from './components/link';
+export { default as Link } from './components/link';
 
 export type { ConfigProviderProps } from './components/configProvider';
 export { default as ConfigProvider, useConfig } from './components/configProvider';

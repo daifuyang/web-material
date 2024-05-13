@@ -15,6 +15,7 @@ export interface TitleProps {
 }
 
 const Title: React.FC<TitleProps> = function Title(props) {
+
   const { __designMode, children, style = {}, className, level = 1, ...otherProps } = props;
 
   let placeholder = '';
